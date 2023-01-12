@@ -95,13 +95,28 @@ export const GlobalStyle = createGlobalStyle<{ props: styleProps }>`
     font-size: inherit;
     font-weight: inherit;
   }
+  
+  h3 {
+    color: ${({props}) =>  `${COLORS.secondary}`}!important;
+  }
 
   header,
+  footer,
   aside,
   section,
   ul
   {
-    background: ${({props}) => props.background};
+    background: ${({props}) => props.background };
+  } 
+  
+  input
+  {
+    background: ${({props}) => props.background }!important;
+    color: ${({props}) =>  `${COLORS.darkBg}`}!important;
+    border: 1px solid ${COLORS.lightContext};
+        :focus {
+          background: ${COLORS.lightContext}!important;
+        }
   }
 
   a {
