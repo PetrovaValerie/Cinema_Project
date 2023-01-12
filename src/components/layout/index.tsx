@@ -1,18 +1,10 @@
 import {ReactNode} from "react";
-import {LayoutMain} from "./style";
+import {LayoutMain, FlexContainer} from "./style";
 import {GlobalStyle} from '../../styles'
 import {useThemeSelector} from "../../redux/store/rootReducer";
-import {Header} from "../header";
-
-export type LayoutProps = {
-    children: ReactNode;
-}
-
-export type ThemeReducerType = {
-    background?: string,
-    color?: string
-}
-
+import {Header} from "../common/header";
+import {Footer} from "../common/footer";
+import {LayoutProps} from "./types";
 
 export const Layout = ({children}: LayoutProps) => {
 
@@ -20,11 +12,13 @@ export const Layout = ({children}: LayoutProps) => {
     return (
         <>
             <GlobalStyle props={selectTheme} />
+            <FlexContainer>
                 <Header />
                 <LayoutMain>
                     {children}
                 </LayoutMain>
-                {/*<Footer />*/}
+                <Footer />
+            </FlexContainer>
         </>
     )
 }
