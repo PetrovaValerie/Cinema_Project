@@ -3,7 +3,7 @@ import {HeaderWrap} from './style';
 import {SearchInput} from "./search";
 import {BtnRow} from "./btnRow";
 import {UserBar} from "./user";
-import {SignInBtn} from "../../../pages/register/signIn";
+import {RegBtn} from "./register/registerBtn";
 
 export const Header = () => {
     const [stateSearch, setStateSearch] = useState(false)
@@ -24,8 +24,7 @@ export const Header = () => {
                          itemSearch={itemSearch}
                          submitBtnValue={submitBtnItem}
             />
-            {/*<UserBar />*/}
-            <SignInBtn />
+            <RegBtn />
         </HeaderWrap>
     )
 }

@@ -112,7 +112,7 @@ export const GlobalStyle = createGlobalStyle<{ props: styleProps }>`
   input
   {
     background: ${({props}) => props.background }!important;
-    color: ${({props}) =>  `${COLORS.darkBg}`}!important;
+    color: ${({props}) =>  `${COLORS.secondary}`}!important;
     border: 1px solid ${COLORS.lightContext};
         :focus {
           background: ${COLORS.lightContext}!important;
