@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import {COLORS} from "../../styles";
+import {COLORS} from "../../../../../styles";
 
-export const RgstrBtnWrap = styled.button`
+export const RgstrBtnWrap = styled.button<{ open: boolean }>`
   padding: 10px;
   width: 10%;
   min-width: 56px;
