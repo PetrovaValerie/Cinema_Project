@@ -13,20 +13,25 @@ export const RegistryNav = ({open}: NavProps) => {
                         <NavlistItem>
                             <UserBar />
                         </NavlistItem>
+
                         <NavlistItem onClick={() => {
                                 navigate("/")
                             }}>
                             HOME
                         </NavlistItem>
+
                         <NavlistItem onClick={() => {
                             navigate("/signUp")
                         }}>
                             SIGN UP
                         </NavlistItem>
 
-                        <NavlistItem>
+                        <NavlistItem onClick={() => {
+                            navigate("/signIn")
+                        }}>
                             SIGN IN
                         </NavlistItem>
+
                         <NavlistItem>
                             LOG OUT
                         </NavlistItem>

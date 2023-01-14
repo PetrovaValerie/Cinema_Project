@@ -10,8 +10,8 @@ export const HeaderBtnRow = styled.ul`
   align-items: center;
 
   img {
-    max-width: 80px;
-    padding: 1%;
+    max-width: 100px;
+    padding: 1% 5% 1% 1%;
   }
 `
 
@@ -33,17 +33,19 @@ export const NavBtn = styled.li`
   line-height: 20px;
   font-weight: 600;
   cursor: pointer;
-
-  :nth-child(1) {
-    margin-left: 10%;
-  }
-
   :hover {
     background-color: ${COLORS.primary2};
   }
 
+  :nth-child(1) {
+    margin-left: 10%;
+    background-color: transparent;
+    }
+  }
+
+
   @media (max-width: 1050px) {
-    :nth-child(2n) {
+    :nth-child(3n) {
       display: none;
     }
     padding: 10px 0;

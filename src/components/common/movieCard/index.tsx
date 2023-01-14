@@ -1,5 +1,5 @@
 import React, {FC} from "react";
-import {CategoryList, CardItem, Img, Year, Genre} from './style';
+import {CategoryList, CardItem, CardRating, Img, Year, Genre} from './style';
 import {CardType} from "./types";
 import {useNavigate} from "react-router-dom";
 
@@ -15,7 +15,7 @@ export const MovieCard: FC<CardType> = ({props}) => {
         <CardItem id={String(props.kinopoiskId)} onClick={() => selectCard(props.kinopoiskId)}>
             <article>
                 <a>
-                    <span>{props.ratingImdb}</span>
+                    <CardRating rating={props.ratingImdb}>{props.ratingImdb}</CardRating>
                     <Img image={props.posterUrl} />
                     <h3>{props.nameOriginal}</h3>
                     <CategoryList>
@@ -29,7 +29,7 @@ export const MovieCard: FC<CardType> = ({props}) => {
                             {props.genres.map(e => ' ' + e.genre).slice(2, 3).toString()}
                         </li>
                     </CategoryList>
-                    <Year>{props.year}</Year>
+                    <Year year={props.year}>{props.year}</Year>
                     <Genre>{props.type}</Genre>
                 </a>
             </article>

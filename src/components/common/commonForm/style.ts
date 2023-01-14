@@ -3,8 +3,8 @@ import {COLORS} from "../../../styles";
 
 export const FormContent = styled.div`
   width: 100%;
-  min-height: 800px;
-  margin: 10% auto;
+  min-height: 400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,9 +12,10 @@ export const FormContent = styled.div`
 
 export const FormBox = styled.form`
   width: 50%;
-  max-width: 500px;
-  min-width: 350px;
-  padding: 20px;
+  max-width: 340px;
+  min-width: 330px;
+  position: relative;
+  padding: 10px;
   margin: 10% auto;
   display: flex;
   flex-direction: column;
@@ -24,9 +25,9 @@ export const FormBox = styled.form`
     `
 
 export const FormName = styled.h1`
+  margin: 3% auto;
   font-family: 'Exo 2', sans-serif;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 22px;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
@@ -43,7 +44,7 @@ export const ErrorMessage = styled.p`
 
 export const SubmitBtn = styled.button`
   margin: 0 auto;
-  height: 60px;
+  height: 50px;
   width: 50%;
   background: ${COLORS.primary2};
   font-family: 'Exo 2', sans-serif;
@@ -54,5 +55,24 @@ export const SubmitBtn = styled.button`
   border-radius: 5px;
   &:hover {
     background: ${COLORS.primary};
+  }
+    `
+
+export const FormQuery = styled.p`
+  position: absolute;
+  bottom: -45px;
+  left: 12%;
+  color: ${COLORS.lightContext};
+  font-family: 'Exo 2', sans-serif;
+  
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  span {
+    padding: 3px;
+      :hover {
+        text-decoration: underline;
+      }
   }
     `

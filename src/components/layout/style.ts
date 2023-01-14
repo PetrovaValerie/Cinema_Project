@@ -5,7 +5,7 @@ export const LayoutMain = styled.main`
     padding: 0;
     width: 100%;
     height: auto;
-    min-height: 800px;
+    //min-height: 800px;
     //display: flex;
     //flex-direction: column;
     //align-content: center;
