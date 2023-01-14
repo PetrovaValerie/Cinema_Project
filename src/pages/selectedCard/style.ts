@@ -47,7 +47,7 @@ export const SelectTitle = styled.h1`
   line-height: 30px;
   font-weight: 600;
   cursor: pointer;
-  color: ${COLORS.whiteContext};
+  color: ${COLORS.lightContext};
   :hover{
     text-decoration: underline;
   }

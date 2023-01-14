@@ -23,7 +23,6 @@ export const CommonInput = (props: CommonInputTypes) => {
             <ErrorMessageBlock>
                 {props.error !== 'true' && <span>{props.error}</span>}
             </ErrorMessageBlock>
-
         </InputFormBlock>
     );
 };

@@ -1,11 +1,18 @@
 import React, {useState} from 'react';
-import {FormContent, FormBox, FormName, ErrorMessage, SubmitBtn} from './style';
-import {RegistryProps} from "./types";
+import {
+    FormContent,
+    FormBox,
+    FormName,
+    ErrorMessage,
+    SubmitBtn,
+    FormQuery
+} from '../../../components/common/commonForm/style';
+import {RegistryProps} from "../../../components/common/commonForm/types";
 import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router-dom";
 import {signUpRequest} from "../../../redux/store/authReducer/action";
 import {userStateMessage} from "../../../redux/others/stateMessage";
-import {CommonInput} from "../../../components/common/commonInput";
+import {CommonInput} from "../../../components/common/commonForm/commonInput";
 
 
 export const SignUpPage = () => {
@@ -102,6 +109,15 @@ export const SignUpPage = () => {
                     DataForm()
                     comparePassword()
                 }}>SIGN UP</SubmitBtn>
+
+                <FormQuery>
+                    Already have an account?
+                    Please <span onClick={() => {
+                    navigate(`/signIn`)
+                }}>
+                SIGN IN</span>
+                </FormQuery>
+
             </FormBox>
         </FormContent>
     );

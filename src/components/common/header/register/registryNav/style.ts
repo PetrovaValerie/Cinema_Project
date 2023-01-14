@@ -13,7 +13,7 @@ export const Ul = styled.ul<{ open: boolean }>`
   transition: transform 0.4s ease-in-out;
   flex-flow: row nowrap;
   background: ${COLORS.whiteContext};
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
@@ -50,11 +50,7 @@ export const NavlistItem = styled.li`
   border-bottom: 1px solid ${COLORS.lightContext};
 
   :first-child {
-    //margin: 0 0 10px;
-  }
-
-  :nth-child(2) {
-    //margin-top: 5px;
+    border-radius: 5px 5px 0 0;
   }
 
   :nth-child(4) {
@@ -62,7 +58,6 @@ export const NavlistItem = styled.li`
   }
 
   :last-child {
-    // background-color: {COLORS.lightContext};
     background-color: ${COLORS.whiteContext};
     border-radius: 0 0 5px 5px;
 

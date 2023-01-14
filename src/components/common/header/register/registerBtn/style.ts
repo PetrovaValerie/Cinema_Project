@@ -32,8 +32,6 @@ export const RgstrBtnWrap = styled.button<{ open: boolean }>`
 
   @media (max-width: 1050px) {
     display: none;
-    //padding: 10px 0;
-    //height: 40px;
   }
 `
 

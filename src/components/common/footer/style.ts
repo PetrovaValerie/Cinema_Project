@@ -3,35 +3,52 @@ import {COLORS} from "../../../styles";
 
 export const FooterWrap = styled.footer`
   width: 100%;
-  padding: 10% 5% 2%;
+  height: 80px;
+  padding: 1% 5%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
+  
+  span {
+    align-items: flex-end;
+    display: flex;
+  }
 
-  li {
-    margin: 10% 0 0 0 !important;
+  div {
     max-height: 30px;
     background: transparent;
 
     :hover {
       background: transparent;
     }
+
+    img {
+      max-width: 100px;
+    }
   }
 `
-export const FooterRow = styled.ul`
-  width: 55%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+export const Rights = styled.span`
+  height: 80%;
+  
+  font-family: 'Exo 2', sans-serif;
+  color: ${COLORS.lightContext};
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  
+  @media (max-width: 1050px) {
+    display: none;
+  }
 `
 
-export const Rights = styled.li`
-    font-family: 'Exo 2', sans-serif;
-    color: ${COLORS.lightContext};
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-      @media (max-width: 1050px) {
-        display: none;
-      }
+export const FooterHomeBtn = styled.div`
+margin-left: 4%;
+padding: 0 0 15px;
+height: 50px;
+min-width: 100px;
+  img {
+    max-width: 80px;
+  }
 `
+

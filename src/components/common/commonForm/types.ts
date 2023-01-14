@@ -4,3 +4,8 @@ export type RegistryProps = {
     password: string,
     passwordConfirm: string,
 }
+
+export type SignInProps = {
+    email : string,
+    password : string,
+}

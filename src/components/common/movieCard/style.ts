@@ -20,27 +20,39 @@ export const CardItem = styled.div`
     color: ${COLORS.whiteContext};
     margin-top: 24px;
   }
+`
 
-  span {
+export const CardRating = styled.div<{rating:number}> `
     position: absolute;
     top: 2%;
     left: 2%;
     z-index: 2;
     width: 39px;
     height: 28px;
-    background-color: ${COLORS.green};
     border-radius: 6px;
-    display: flex;
     justify-content: center;
     align-items: center;
     color: ${COLORS.whiteContext};
     font-weight: 600;
-
+      background: ${(props) => {
+        if (Number(props.rating) > 7) {
+          return `${COLORS.green}`;
+        } else if (Number(props.rating) > 5) {
+          return `${COLORS.yellow}`;
+        } else {
+          return `${COLORS.orange}`;
+        }
+      }};
     :hover {
       box-shadow: rgb(67, 213, 12) 10px 30px 90px;
     }
-  }
+      display: ${(props) => {
+        if (Number(props.rating) > 0) {
+          return 'flex';
+        } else {return 'none'}
+      }};
 `
+
 
 export const Img = styled.div<{ image: string }>`
   width: 150px;
@@ -83,7 +95,7 @@ export const Genre = styled.div`
 }
 `
 
-export const Year = styled.div`
+export const Year = styled.div<{ year: number | string }>`
   position: absolute;
   bottom: 27%;
   left: 2%;
@@ -92,11 +104,15 @@ export const Year = styled.div`
   height: 20px;
   background-color: ${COLORS.primary2};
   border-radius: 6px;
-  display: flex;
   justify-content: center;
   align-items: center;
   color: ${COLORS.whiteContext};
   font-weight: 600;
+  display: ${(props) => {
+    if (props.year > 0) {
+      return 'flex';
+    } else {return 'none'}
+  }};
 }
 `
 
