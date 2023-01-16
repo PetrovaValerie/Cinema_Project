@@ -5,6 +5,7 @@ export const FooterWrap = styled.footer`
   width: 100%;
   height: 80px;
   padding: 1% 5%;
+  margin-top: 5%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

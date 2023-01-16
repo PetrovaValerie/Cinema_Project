@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {GetSearchCards} from "../../other/data/showSearchedCards";
+import {GetSearchCards} from "../../utils/customHooks/showSearchedCards";
 import {MovieCard} from "../../components/common/movieCard";
 import {HomeWrap, HomeContainer} from "../homePage/style";
 import {SearchWrapper} from "./style";
