@@ -22,35 +22,23 @@ export const CardItem = styled.div`
   }
 `
 
-export const CardRating = styled.div<{rating:number}> `
+export const CardRating = styled.div<{ colorChange?: string }>`
     position: absolute;
     top: 2%;
     left: 2%;
     z-index: 2;
     width: 39px;
-    height: 28px;
+    height: 20px;
     border-radius: 6px;
+    display: flex;
     justify-content: center;
     align-items: center;
     color: ${COLORS.whiteContext};
     font-weight: 600;
-      background: ${(props) => {
-        if (Number(props.rating) > 7) {
-          return `${COLORS.green}`;
-        } else if (Number(props.rating) > 5) {
-          return `${COLORS.yellow}`;
-        } else {
-          return `${COLORS.orange}`;
-        }
-      }};
+    background: ${({colorChange}) => colorChange ? colorChange : '${COLORS.secondary}'};
     :hover {
       box-shadow: rgb(67, 213, 12) 10px 30px 90px;
     }
-      display: ${(props) => {
-        if (Number(props.rating) > 0) {
-          return 'flex';
-        } else {return 'none'}
-      }};
 `
 
 
@@ -80,11 +68,11 @@ export const CategoryList = styled.ul`
 
 export const Genre = styled.div`
   position: absolute;
-  bottom: 27%;
-  right: 20%;
+  bottom: 30%;
+  right: 25%;
   z-index: 2;
   width: 40%;
-  height: 28px;
+  height: 20px;
   background-color: ${COLORS.green};
   border-radius: 6px;
   display: flex;
@@ -97,7 +85,7 @@ export const Genre = styled.div`
 
 export const Year = styled.div<{ year: number | string }>`
   position: absolute;
-  bottom: 27%;
+  bottom: 30%;
   left: 2%;
   z-index: 2;
   width: 20%;

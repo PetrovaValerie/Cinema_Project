@@ -6,26 +6,53 @@ export type GenresType = {
     genre: string
 }
 
-export type ItemsType = {
-    genres: GenresType[],
-    imdbId: string,
-    kinopoiskId: number,
-    nameOriginal: string,
-    posterUrl: string,
-    ratingImdb: number,
-    type: string,
-    year: string
-}
+// export type ItemsType = {
+//     genres: GenresType[],
+//     imdbId: string,
+//     kinopoiskId: number,
+//     nameOriginal: string,
+//     posterUrl: string,
+//     ratingImdb: number,
+//     type: string,
+//     year: string
+// }
+
+// export type CardsHomeType = {
+//     total: number,
+//     totalPages: number,
+//     items: ItemsType[]
+// }
 
 export type CardsHomeType = {
     total: number,
     totalPages: number,
-    items: ItemsType[]
+    items: CardItemProp[]
 }
 
-export type CardType = {
-    props: ItemsType | SelectedCardProp
+export type CardItemProp = {
+    countries: CountriesType[],
+    genres: GenresType[],
+    imdbId: string,
+    kinopoiskId: number,
+    filmLength: string,
+    nameEn?: string | null,
+    nameOriginal?: string,
+    nameRu: string | null,
+    posterUrl: string,
+    posterUrlPreview: string,
+    ratingImdb: number,
+    ratingKinopoisk: number,
+    type: string,
+    year: string
 }
+
+// export type CardType = {
+//     props: CardItemProp | SelectedCardProp
+// }
+
+// export type CardType = {
+//     props: ItemsType | SelectedCardProp
+// }
 
 export type SelectedCardProp = {
     kinopoiskId: number,
@@ -54,7 +81,7 @@ export type SelectedCardProp = {
     year: number,
     filmLength: number,
     slogan?: string,
-    description: string,
+    description?: string,
     shortDescription?: string,
     editorAnnotation?: string,
     isTicketsAvailable?: boolean,

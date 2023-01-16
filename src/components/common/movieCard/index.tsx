@@ -1,7 +1,13 @@
 import React, {FC} from "react";
 import {CategoryList, CardItem, CardRating, Img, Year, Genre} from './style';
-import {CardType} from "./types";
+// import {CardType} from "./types";
 import {useNavigate} from "react-router-dom";
+import {colorChange} from "../../../utils/functions/ratingColorChange";
+import {CardItemProp, SelectedCardProp} from "./types";
+
+type CardType = {
+    props: CardItemProp | SelectedCardProp
+}
 
 export const MovieCard: FC<CardType> = ({props}) => {
 
@@ -15,7 +21,11 @@ export const MovieCard: FC<CardType> = ({props}) => {
         <CardItem id={String(props.kinopoiskId)} onClick={() => selectCard(props.kinopoiskId)}>
             <article>
                 <a>
-                    <CardRating rating={props.ratingImdb}>{props.ratingImdb}</CardRating>
+                    {props.ratingKinopoisk ?
+                        <CardRating
+                            colorChange={colorChange(props.ratingKinopoisk)}>{props.ratingKinopoisk}</CardRating>
+                        : <CardRating colorChange={colorChange(props.ratingImdb)}>{props.ratingImdb}</CardRating>
+                    }
                     <Img image={props.posterUrl} />
                     <h3>{props.nameOriginal}</h3>
                     <CategoryList>

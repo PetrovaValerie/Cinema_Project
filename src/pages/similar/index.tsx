@@ -1,7 +1,8 @@
 import React from 'react';
 import {useParams} from "react-router-dom";
-import {GetSimilar} from "../../other/data/showSimCards";
+import {GetSimilar} from "../../utils/customHooks/showSimCards";
 import {SimWrap, SimContainer, Simcontent} from "./style";
+import {SimSlider} from "./simSlider";
 
 
 export const SelectSimilar = () => {
@@ -20,6 +21,7 @@ export const SelectSimilar = () => {
                         <span>{card.total}</span>
                     </Simcontent>
                 </SimContainer>
+                <SimSlider />
             </SimWrap>}
         </>
     );

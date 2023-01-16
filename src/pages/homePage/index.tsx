@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {HomeWrap, HomeContainer, BtnFilmLoader, LoaderMoreBtn} from './style'
-import { GetAllCards} from "../../other/data/showAllCards";
+import { GetAllCards} from "../../utils/customHooks/showAllCards";
 import {MovieCard} from "../../components/common/movieCard";
-import {ALL} from "../../other/constants";
+import {ALL} from "../../utils/constants";
 import {Loader} from "../../other/loader";
 // import GlobalLoading from "../../other/loader/GlobalLoader";
 

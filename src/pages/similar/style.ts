@@ -4,8 +4,7 @@ import {COLORS} from "../../styles";
 export const SimWrap = styled.section`
   display: flex;
   flex-direction: column;
-  margin: 50px;
-  padding: 0 50px;
+  margin-left: 10%;
     `
 
 export const SimContainer = styled.div`
@@ -16,18 +15,15 @@ export const SimContainer = styled.div`
 
 export const Simcontent = styled.div`
   display: flex;
-  margin-left: 8%;
-  
   align-items: center;
   min-height: 50px;
   font-family: 'Exo 2', sans-serif;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 600;
   cursor: pointer;
-  color: ${COLORS.whiteContext};
+  color: ${COLORS.lightContext};
   p {
-    font-size: 20px;
     margin-right: 10px;
   }
   span {

@@ -1,10 +1,13 @@
 import React from 'react';
-import {SelectedCardWrap, SelectRow, SelectImgWrap, SelectImg, SelectInfoList,
-        SelectedDescr, SelectTitle, InfoItem, SelectPlot
-} from "./style";
-import {ShowSelected} from "../../other/data/showSelectedCard";
+import {SelectedCardWrap, SelectRow, SelectImgWrap, SelectImg, TitleBlock,
+        SelectedDescr, SelectTitle} from "./styles/main";
+import {RatingInfo, RatingItem, RatingNmbr} from "./styles/rating";
+import {InfoItem, SelectParams} from "./styles/info";
+
+import {ShowSelected} from "../../utils/customHooks/showSelectedCard";
 import {useParams} from "react-router-dom";
 import {SelectSimilar} from "../similar";
+import {colorChange} from "../../utils/functions/ratingColorChange";
 
 
 export const SelectedCard = () => {
@@ -22,41 +25,49 @@ export const SelectedCard = () => {
                 <SelectImgWrap>
                     <SelectImg src={`${card.posterUrl}`}/>
                 </SelectImgWrap>
-
                 <SelectedDescr>
-                    <SelectTitle>{card.nameRu}</SelectTitle>
-                    <SelectInfoList>
-                        {card.year && <InfoItem>
-                            <span>Год выпуска:</span>{card.year}
-                        </InfoItem>}
-                        {card.countries && <InfoItem>
-                            <span>Страна:</span><p>{card.countries.map(e => e.country).join(', ')}</p>
-                        </InfoItem>}
-                        {card.genres && <InfoItem>
-                            <span>Жанр:</span><p>{card.genres.map(e => e.genre).join('/ ')}</p>
-                        </InfoItem>}
-                        {card.filmLength && <InfoItem>
-                            <span>Продолжительность:</span><p>{card.filmLength} мин.</p>
-                        </InfoItem>}
-                        {card.ratingKinopoisk && <InfoItem>
-                            <span>Рейтинг Кинопоиска:</span><p>{card.ratingKinopoisk}</p>
-                        </InfoItem>}
-                        {card.ratingFilmCritics && <InfoItem>
-                            <span>Рейтинг Кинокритиков:</span><p>{card.ratingFilmCritics}</p>
-                        </InfoItem>}
-                        {card.ratingImdb && <InfoItem>
-                            <span>Рейтинг IMDb:</span><p>{card.ratingImdb}</p>
-                        </InfoItem>}
-
-                     </SelectInfoList>
+                    <TitleBlock>
+                        <SelectTitle>{card.nameRu}</SelectTitle>
+                        <RatingInfo>
+                            {<RatingItem colorChange={colorChange(card.ratingKinopoisk)}>
+                                <p>Кинопоиск:</p>
+                                <p>{card.ratingKinopoisk ? card.ratingKinopoisk : '-'}</p>
+                                <RatingNmbr>Голосов: {card.ratingKinopoiskVoteCount}</RatingNmbr>
+                            </RatingItem>}
+                            {<RatingItem colorChange={colorChange(card.ratingImdb)}>
+                                <p>IMDb:</p>
+                                <p>{card.ratingImdb ? card.ratingImdb : '-'}</p>
+                                <RatingNmbr>Голосов: {card.ratingImdbVoteCount}</RatingNmbr>
+                            </RatingItem>}
+                            {<RatingItem colorChange={colorChange(card.ratingFilmCritics)}>
+                                <p>Критики:</p>
+                                <p>{card.ratingFilmCritics ? card.ratingFilmCritics : '-'}</p>
+                                <RatingNmbr>Голосов: {card.ratingFilmCriticsVoteCount}</RatingNmbr>
+                            </RatingItem>}
+                        </RatingInfo>
+                    </TitleBlock>
+                        <SelectParams>
+                                {card.genres && <InfoItem>
+                                    <span>{card.genres.map(e => e.genre).join(' · ')}</span>
+                                </InfoItem>}
+                                {card.year && <InfoItem>
+                                    <span>Год выпуска:</span>{card.year}
+                                </InfoItem>}
+                                {card.countries && <InfoItem>
+                                    <span>Страна:</span><p>{card.countries.map(e => e.country).join(', ')}</p>
+                                </InfoItem>}
+                                {card.filmLength && <InfoItem>
+                                    <span>Продолжительность:</span><p>{card.filmLength} мин.</p>
+                                </InfoItem>}
+                                {card.shortDescription && <InfoItem>
+                                   <p>{card.shortDescription}</p>
+                                </InfoItem>}
+                        </SelectParams>
                 </SelectedDescr>
                 </SelectRow>
 
-                <SelectPlot>
-                    <p>Описание фильма: </p>
-                    <p>{card.description}</p>
-                </SelectPlot>
                  <SelectSimilar />
+
                 </>
             }
         </SelectedCardWrap>
