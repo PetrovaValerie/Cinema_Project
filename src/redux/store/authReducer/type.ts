@@ -1,8 +1,5 @@
-export type SignUpError = {
-    username: Array<string>
-    email: Array<string>
-    password: Array<string>
-}
+import {REGISTER_SUCCESS} from "../sagaUserRegistry/type";
+
 
 export type SignUpPayload = {
     username: string
@@ -16,6 +13,46 @@ export type SignUpSuccessPayload = {
     id: number
 }
 
+export type SignUpError = {
+    username: Array<string>
+    email: Array<string>
+    password: Array<string>
+}
+
 export const SIGNUP_REQUEST = "SIGNUP_REQUEST";
 export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";
 export const SIGNUP_FAILURE = "SIGNUP_FAILURE";
+
+export interface SignupFailurePayload {
+    error: string;
+}
+
+export interface SignupPayload {
+    values: { email: string, password: string };
+}
+
+export interface SignupRequest {
+    type: "SIGNUP_REQUEST";
+    payload: SignupPayload;
+}
+
+export type SignupSuccess = {
+    type: typeof SIGNUP_SUCCESS,
+    payload: SignUpSuccessPayload,
+};
+
+export type SignupFailure = {
+    type: typeof SIGNUP_FAILURE,
+    payload: SignUpError,
+};
+
+export type SignInSuccess = {
+    type: typeof REGISTER_SUCCESS,
+    payload: SignUpSuccessPayload
+}
+
+export type AuthActions =
+    SignupFailure
+    | SignupSuccess
+    | SignupRequest
+    | SignInSuccess;

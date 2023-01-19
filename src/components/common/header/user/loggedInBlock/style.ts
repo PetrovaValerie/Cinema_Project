@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {COLORS} from '../../../../styles';
+import {COLORS} from '../../../../../styles';
 
 export const UserWrap = styled.div`
      width: 10%;
@@ -16,27 +16,10 @@ export const UserWrap = styled.div`
       p {
         padding: 0 20px;
         font-family: 'Exo 2', sans-serif;
-        // color: ${COLORS.whiteContext};
         color: ${COLORS.primary};
         font-size: 16px;
         line-height: 24px;
         font-weight: 600;
-      }
-      //::after {
-      //  content: '';
-      //  display: block;
-      //  width: 10px;
-      //  height: 10px;
-      //  border-top: 2px solid #ccc;
-      //  border-right: 2px solid #ccc;
-      //  position: absolute;
-      //  top: 50%;
-      //  right: 1%;
-      //  z-index: 1;
-      //  transform: translateY(-50%) rotate(135deg); /* выравнила по оси и развернула стрелку вниз*/
-      //  :hover {
-      //    transform: translateY(-50%) rotate(-45deg); /* выравнила по оси и развернула стрелку вверх */
-      //  }
       }
   `
 

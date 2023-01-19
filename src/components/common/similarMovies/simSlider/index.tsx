@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import {useNavigate, useParams} from "react-router-dom";
 import {FaChevronLeft, FaChevronRight} from 'react-icons/fa'
 import {SimSliderWrap, SliderContainer, SliderImgBlock, SliderImg} from "./style";
-import {GetSimilar} from "../../../utils/customHooks/showSimCards";
+import {GetSimilar} from "../../../../utils/customHooks/showSimCards";
 
 export const SlickButton = ({currentSlide, slideCount, children, ...props} : any) => (
     <span {...props}  style={{ cursor:'pointer'}}>{children}</span>

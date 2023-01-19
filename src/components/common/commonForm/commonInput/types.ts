@@ -8,5 +8,5 @@ export type CommonInputTypes = {
     error: string,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
     errorChange: Dispatch<SetStateAction<string>>,
-    validate?: (email: string) => string
+    validate: (email: string) => string
 }

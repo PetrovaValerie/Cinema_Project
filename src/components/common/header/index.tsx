@@ -2,10 +2,10 @@ import React, {useState} from "react";
 import {HeaderWrap} from './style';
 import {SearchInput} from "./search";
 import {BtnRow} from "./btnRow";
-import {UserBar} from "./user";
 import {RegBtn} from "./register/registerBtn";
 
 export const Header = () => {
+
     const [stateSearch, setStateSearch] = useState(false)
 
     const params = new URLSearchParams(document.location.search);
@@ -18,13 +18,15 @@ export const Header = () => {
     }
 
     return (
+        <>
         <HeaderWrap>
             <BtnRow />
             <SearchInput setStateSearch={setStateSearch}
                          itemSearch={itemSearch}
                          submitBtnValue={submitBtnItem}
             />
-            <RegBtn />
+            <RegBtn/>
         </HeaderWrap>
+        </>
     )
 }

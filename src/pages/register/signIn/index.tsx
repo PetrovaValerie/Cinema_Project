@@ -5,6 +5,7 @@ import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router-dom";
 import {signInRequest} from "../../../redux/store/sagaUserRegistry/type";
 import {CommonInput} from "../../../components/common/commonForm/commonInput";
+import {validateEmail, validatePassword} from "../../../utils/validation";
 
 
 export const SignInPage = () => {
@@ -50,7 +51,7 @@ export const SignInPage = () => {
                     value={value.email}
                     error={errorEmail}
                     errorChange={setErrorEmail}
-                    // validate={validateEmail}
+                    validate={validateEmail}
                     onChange={handleChange}
                 />
                 <CommonInput
@@ -60,17 +61,17 @@ export const SignInPage = () => {
                     value={value.password}
                     error={errorPassword}
                     errorChange={setErrorPassword}
-                    // validate={validatePassword}
+                    validate={validatePassword}
                     onChange={handleChange}
                 />
                 <SubmitBtn onClick={DataForm}>SIGN IN</SubmitBtn>
 
                 <FormQuery>
-                    Don't have an account yet?
-                    Please <span onClick={() => {
-                    navigate(`/signUp`)
-                }}>
-                SIGN UP</span>
+                    Don't have an account yet? Please
+                        <span onClick={() => {
+                        navigate(`/signUp`) }}>
+                        SIGN UP
+                        </span>
                 </FormQuery>
 
             </FormBox>

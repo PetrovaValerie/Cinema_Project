@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {COLORS} from "../../../styles";
+import {COLORS} from "../../../../styles";
 
 export const SimSliderWrap = styled.section`
   margin: 20px auto;

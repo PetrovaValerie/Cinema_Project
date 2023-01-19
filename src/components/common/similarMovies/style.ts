@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {COLORS} from "../../styles";
+import {COLORS} from "../../../styles";
 
 export const SimWrap = styled.section`
   display: flex;

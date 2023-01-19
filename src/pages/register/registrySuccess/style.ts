@@ -1,24 +1,29 @@
 import styled from "styled-components";
 import {COLORS} from "../../../styles";
 
-export const SuccessContainer = styled.div`
+export const SuccessContainer = styled.section`
   width: 100%;
-  height: 60px;
-  margin: 0 auto;
+  height: 400px;
+  margin: 5% auto 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
-  position: relative;
+  justify-content: center;
+  align-content: center;
+`
 
-  :nth-child(n) {
-    position: absolute;
-    top: 35%;
+export const SuccessTxt = styled.p`
+    margin: 1% auto 0;
     font-family: 'Exo 2', sans-serif;
-    color: ${COLORS.secondary};
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
+    color: ${COLORS.lightContext};
     cursor: pointer;
-  }
+      :last-of-type {
+        margin: 5% auto 0;
+        font-size: 12px;
+        :hover {
+          text-decoration: underline;
+        }
+      }
 `

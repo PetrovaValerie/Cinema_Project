@@ -7,9 +7,9 @@ export const RegBtn = () => {
     const [open, setOpen] = useState(false);
     return (
         <RgstrBtnWrap open = {open}
-                        onClick={() => setOpen(!open)} >
+                      onClick={() => setOpen(!open)}>
             <p>REGISTER</p>
-            <RegistryNav open={open}/>
+            <RegistryNav open={open} />
         </RgstrBtnWrap>
     )
 }
