@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams} from "react-router-dom";
-import {GetSimilar} from "../../utils/customHooks/showSimCards";
+import {GetSimilar} from "../../../utils/customHooks/showSimCards";
 import {SimWrap, SimContainer, Simcontent} from "./style";
 import {SimSlider} from "./simSlider";
 

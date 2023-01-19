@@ -13,6 +13,7 @@ import {useNavigate} from "react-router-dom";
 import {signUpRequest} from "../../../redux/store/authReducer/action";
 import {userStateMessage} from "../../../redux/others/stateMessage";
 import {CommonInput} from "../../../components/common/commonForm/commonInput";
+import {validateEmail, validatePassword, validateUserName} from "../../../utils/validation";
 
 
 export const SignUpPage = () => {
@@ -74,6 +75,7 @@ export const SignUpPage = () => {
                     value={value.username}
                     error={errorUserName}
                     errorChange={setErrUserName}
+                    validate={validateUserName}
                     onChange={handleChange}
                 />
                 <CommonInput
@@ -81,8 +83,9 @@ export const SignUpPage = () => {
                     name={'email'}
                     placeholder={'Enter your email'}
                     value={value.email}
-                    error={errorUserName}
+                    error={errorEmail}
                     errorChange={setErrEmail}
+                    validate={validateEmail}
                     onChange={handleChange}
                 />
                 <CommonInput
@@ -92,6 +95,7 @@ export const SignUpPage = () => {
                     value={value.password}
                     error={errorPswrd}
                     errorChange={setErrPswrd}
+                    validate={validatePassword}
                     onChange={handleChange}
                 />
                 <CommonInput
@@ -101,14 +105,15 @@ export const SignUpPage = () => {
                     value={value.passwordConfirm}
                     error={errorPswrdConf}
                     errorChange={setErrPswrdConf}
+                    validate={validatePassword}
                     onChange={handleChange}
                 />
 
                 {compare && <ErrorMessage>Passwords do not match</ErrorMessage>}
-                <SubmitBtn onClick={() => {
-                    DataForm()
-                    comparePassword()
-                }}>SIGN UP</SubmitBtn>
+                    <SubmitBtn onClick={() => {
+                        DataForm()
+                        comparePassword()
+                    }}>SIGN UP</SubmitBtn>
 
                 <FormQuery>
                     Already have an account?

@@ -6,7 +6,7 @@ import {InfoItem, SelectParams} from "./styles/info";
 
 import {ShowSelected} from "../../utils/customHooks/showSelectedCard";
 import {useParams} from "react-router-dom";
-import {SelectSimilar} from "../similar";
+import {SelectSimilar} from "../../components/common/similarMovies";
 import {colorChange} from "../../utils/functions/ratingColorChange";
 
 

@@ -1,24 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import { UserBar } from "../../user";
 import { Ul, NavlistItem } from "./style";
 import {NavProps} from "./types";
+import {UserBar} from "../../user";
+import {useDispatch} from "react-redux";
 
 export const RegistryNav = ({open}: NavProps) => {
 
-    const navigate = useNavigate()
-
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const [loginState, setLoginState] = useState(false)
     return (
                     <Ul open = {open}>
+
                         <NavlistItem>
-                            <UserBar />
+                            <UserBar loginState={loginState} setLoginState={setLoginState}/>
                         </NavlistItem>
 
-                        <NavlistItem onClick={() => {
-                                navigate("/")
-                            }}>
-                            HOME
-                        </NavlistItem>
+                        {/*<NavlistItem onClick={() => {*/}
+                        {/*        navigate("/")*/}
+                        {/*    }}>*/}
+                        {/*    HOME*/}
+                        {/*</NavlistItem>*/}
 
                         <NavlistItem onClick={() => {
                             navigate("/signUp")
@@ -32,7 +35,10 @@ export const RegistryNav = ({open}: NavProps) => {
                             SIGN IN
                         </NavlistItem>
 
-                        <NavlistItem>
+                        <NavlistItem onClick={() => {
+                            setLoginState(false)
+                            dispatch({type:"REGISTER_SUCCESS", payload: null})
+                           }}>
                             LOG OUT
                         </NavlistItem>
 
