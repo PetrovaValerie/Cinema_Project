@@ -14,7 +14,7 @@ export const UserWrap = styled.div`
      right: 0;
   
       p {
-        padding: 0 20px;
+        padding: 0 20px 0 10px;
         font-family: 'Exo 2', sans-serif;
         color: ${COLORS.primary};
         font-size: 16px;

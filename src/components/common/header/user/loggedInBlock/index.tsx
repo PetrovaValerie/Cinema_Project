@@ -17,13 +17,11 @@ export const LoggedIn:FC<OnclickType> = ({loginState, setLoginState}) => {
                 {user?.length &&
                     <UserWrap onClick={changeLoginState}>
                         <UserAbbr>
-                            {/*<span>VP</span>*/}
                             <span>
                                 {user[0].toUpperCase()}
                             </span>
                         </UserAbbr>
-                        {/*<p>Valerie Petrova</p>*/}
-                        <p>{user.slice(1, 8)}</p>
+                        <p>{user.slice(0, 8)}</p>
                     </UserWrap>
                 }
             </>
