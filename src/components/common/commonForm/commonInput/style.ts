@@ -17,9 +17,6 @@ export const Input = styled.input<{ error?: string }>`
   display: flex;
   padding: 8px;
   border-radius: 10px;
-  // border: 2px solid ($){({error}) => error ? 'red' : 'grey'};
-  //color: black;
-  
   font-family: 'Exo 2', sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -30,13 +27,17 @@ export const Input = styled.input<{ error?: string }>`
 `
 export const ErrorMessageBlock = styled.div`
   display: flex;
-  font-size: 10px;
-  margin-top: 5px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-top: 2px;
   width: 100%;
-  height: 20px;
+  min-height: 20px;
+  height: max-content;
   padding: 0 5px;
 
   & span {
-    color: red;
+    color: #9a1c1c;
   }
 `

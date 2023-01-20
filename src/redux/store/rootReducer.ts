@@ -2,10 +2,8 @@ import {applyMiddleware, combineReducers, createStore} from 'redux';
 import {TypedUseSelectorHook, useSelector} from "react-redux";
 import createSagaMiddleware from 'redux-saga';
 import {all} from "redux-saga/effects";
-
 import {signUpSaga} from "./sagaUserRegistry/signUpSaga";
 import { signInSaga } from './sagaUserRegistry/signInSaga';
-
 import {themeReducer} from "./themeReducer";
 import {composeWithDevTools} from "redux-devtools-extension";
 import {authReducer, AuthStateType} from "./authReducer/authReducer";

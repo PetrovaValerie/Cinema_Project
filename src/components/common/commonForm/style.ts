@@ -35,8 +35,11 @@ export const FormName = styled.h1`
     `
 
 export const ErrorMessage = styled.p`
+  font-family: 'Exo 2', sans-serif;
+  font-size: 14px;
   position: absolute;
-  bottom: 100px;
+  padding: 10px 0;
+  bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
   color: ${COLORS.errorContext};

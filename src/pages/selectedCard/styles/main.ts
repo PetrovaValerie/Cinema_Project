@@ -8,7 +8,6 @@ export const SelectedCardWrap = styled.section`
   margin: 0 auto;
   padding-top: 10%;
   width: 100%;
-  //height: auto;
   height: 100vh;
   min-height: 800px;
     `

@@ -113,7 +113,9 @@ export const SignUpPage = () => {
                     <SubmitBtn onClick={() => {
                         DataForm()
                         comparePassword()
-                    }}>SIGN UP</SubmitBtn>
+                    }}>
+                        SIGN UP
+                    </SubmitBtn>
 
                 <FormQuery>
                     Already have an account?
