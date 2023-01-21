@@ -1,5 +1,4 @@
-import styled, {createGlobalStyle} from "styled-components";
-import {COLORS} from "../../../styles";
+import styled from "styled-components";
 
 export const HeaderWrap = styled.header`
   width: 100%;
@@ -9,9 +8,4 @@ export const HeaderWrap = styled.header`
   align-items: center;
   position: fixed;
   z-index: 10;
-`
-export const OverflowBodyStyle = createGlobalStyle`
-  body {
-    overflow-y: hidden;
-  }
 `
