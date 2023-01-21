@@ -2,17 +2,19 @@ import styled from 'styled-components';
 import {COLORS} from "../../styles";
 
 export const HomeWrap = styled.section`
+  width: 100%;
   margin: 0 auto;
+  //display: flex;
 `
 
 export const HomeContainer = styled.div`
-  width: 100%;
+  width: 75%;
   min-height: 840px;
   padding: 150px 0px 50px;
   margin: 0 auto 50px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   @media (max-width: 1050px) {
     padding: 150px 0 100px;

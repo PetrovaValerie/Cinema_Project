@@ -4,13 +4,23 @@ import { GetAllCards} from "../../utils/customHooks/showAllCards";
 import {MovieCard} from "../../components/common/movieCard";
 import {ALL} from "../../utils/constants";
 import {Loader} from "../../other/loader";
-// import GlobalLoading from "../../other/loader/GlobalLoader";
+import {FilterByCategory} from "../../components/common/categoryFilter";
+import {SearchPageBlock, SearchWrapper} from "../searchPage/style";
 
 export const Home = () => {
 
     const cardsArray = GetAllCards(ALL)
     const [buttonLoad, setButtonLoad] = useState(false)
+    // const [stateAdvSearch, setStateAdvSearch] = useState(false)
 
+    const params = new URLSearchParams(document.location.search);
+    const keywordParams = params.get('keyword') || ''
+    const [valueSearch, setValueSearch] = useState(keywordParams)
+
+    const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
+        e.preventDefault()
+        setValueSearch(e.target.value)
+    }
 
     const getButtonLoad = () => {
         setButtonLoad(true)
@@ -25,22 +35,24 @@ export const Home = () => {
     }
 
     return (
-        <>
+        <SearchPageBlock>
+            <SearchWrapper>
             {cardsArray.cards.length ?
 
                 <HomeWrap>
                     <HomeContainer>
-                            {cardsArray.cards.map((e) => e.items.map(card => <MovieCard props={card}
-                                                                                   key={card.kinopoiskId}/>))}
+                            {cardsArray.cards.map((e) => e.items.
+                            map(card => <MovieCard props={card} key={card.kinopoiskId}/>))}
                     </HomeContainer>
                     {cardsArray.page < 5 &&
                         <BtnFilmLoader onClick={getCards}>
                             LOAD MORE
                             {buttonLoad && <LoaderMoreBtn/>}
                         </BtnFilmLoader>}
-                </HomeWrap>
+                </HomeWrap> : <Loader/>}
+                </SearchWrapper>
 
-            : <Loader/>}
-        </>
+            <FilterByCategory valueSearch={valueSearch} handleSubmitValue={handleSubmit}/>
+        </SearchPageBlock>
     )
 }
