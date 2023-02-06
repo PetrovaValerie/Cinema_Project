@@ -17,6 +17,7 @@ export const SearchBar = styled.input`
   padding: 20px 42px;
   width: 80%;
   height: auto;
+  max-height: 52px;
   background: ${COLORS.graphiteBg};
   border-radius: 15px;
   cursor: pointer;

@@ -1,46 +1,79 @@
-# Getting Started with Create React App
+<!-- LOGO -->
+![Logo][logo]
+<div align="center">
+<h1>PIXEMA</h1>
+Movie APP based on Kinopoisk API
+<hr/>
+<img src="https://shields.io/badge/react-black?logo=react&style=for-the-badge%22" alt="React badge">
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#description">Description</a>
+    </li>
+    <li>
+      <a href="#installation">Installation</a>
+    </li>
+    <li><a href="#details">Details</a></li>
+  </ol>
+</details>
 
-## Available Scripts
+<!-- DESCRIPTION -->
+## Description
+Pixema is a free movie database. The service provides following opportunities:
 
-In the project directory, you can run:
+- watch through all movie database or serials specifically;
+- search for movies and use filtering;
+- look through detailed movie information and other similar movies;
+- the users can authorize;
+- change the application theme (dark/light).
 
-### `npm start`
+<!-- INSTALLATION -->
+## Installation
+1. Clone the repository:
+    `git clone https://github.com/PetrovaValerie/Cinema_Project.git`
+2. Install dependencies:
+    `npm install`
+3. Start local server in your browser:
+   `npm run start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- DETAILS -->
+## Details
+Once you started the app, you can see home page with all movies presented. 
+You can switch between the movies/TV series views
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Home page][home]
 
-### `npm test`
+To toggle between dark/light modes, click the switch at the footer
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Toggle themes][light-theme]
 
-### `npm run build`
+In order to use simple search at the top of the page, type in the search input area a movie title.
+Or choose a category filter on the left side of the homepage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+By clicking at the movie card,the user can see detailed movie information
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Detailed information][single-card]
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The user can also create an account (sign up / sign in / log out) by clicking on the "Register" button.
 
-### `npm run eject`
+![Registration-form][register]
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[🔼 Back to top ](#description)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+[//]: # (Images)
+[logo]: screens/logo.png
+[home]: screens/homepage.png
+[light-theme]: screens/lightmode.png
+[single-card]: screens/single-card.png
+[register]: screens/register.png

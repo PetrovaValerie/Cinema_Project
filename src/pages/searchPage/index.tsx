@@ -30,6 +30,7 @@ export const SearchMoviePage = () => {
 
     return (
         <SearchPageBlock>
+            <FilterByCategory valueSearch={valueSearch} handleSubmitValue={handleSubmit}/>
 
             <SearchWrapper>
                 {searchCards.cards?.items.length ? <HomeWrap>
@@ -42,7 +43,6 @@ export const SearchMoviePage = () => {
                 </HomeWrap> : <Loader/>}
             </SearchWrapper>
 
-            <FilterByCategory valueSearch={valueSearch} handleSubmitValue={handleSubmit}/>
         </SearchPageBlock>
     );
 };
