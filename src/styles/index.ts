@@ -109,7 +109,8 @@ export const GlobalStyle = createGlobalStyle<{ props: styleProps }>`
     background: ${({props}) => props.background };
   } 
   
-  input
+  input, 
+  select
   {
     background: ${({props}) => props.background }!important;
     color: ${({props}) =>  `${COLORS.secondary}`}!important;

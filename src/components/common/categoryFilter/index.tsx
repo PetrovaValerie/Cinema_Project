@@ -39,7 +39,7 @@ export const FilterByCategory: FC<SearchCategoryProps> = ({
         return (
             <FilterWrapper>
                 <FilterForm onSubmit={handleSubmit}>
-                    <h2>FILTERS</h2>
+                    <h2>Choose a Movie:</h2>
 
                     <SearchFilterField>
                         <div>

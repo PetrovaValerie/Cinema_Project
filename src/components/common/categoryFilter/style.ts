@@ -5,16 +5,17 @@ export const FilterWrapper = styled.section`
   width: 25%;
   min-height: 750px;
   max-height: 760px;
-  margin: 150px 120px 50px 0;
-  background: ${COLORS.secondary};
+  margin: 150px 0px 50px 100px;
+  // background: {COLORS.graphiteBg};
   border-radius: 5px;
+  border: 2px solid ${COLORS.graphiteBg};
   `
 
 export const FilterForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
    font-family: 'Exo 2', sans-serif;
    font-size: 16px;
    line-height: 20px;
@@ -24,7 +25,6 @@ export const FilterForm = styled.form`
     h2 {
       margin-top: 5%;
       font-size: 18px;
-      color: ${COLORS.graphiteBg};
     }
   `
 
@@ -63,7 +63,7 @@ export const SearchFilterField = styled.div`
   }
   & select {
     color: ${COLORS.lightContext};
-    background: ${COLORS.blackBg};
+    // background: {COLORS.blackBg};
   }
   &:first-of-type{
 
@@ -79,6 +79,7 @@ export const SearchFilterField = styled.div`
 export const ApplyFilterBtn = styled.input`
   width: 200px;
   border-radius: 10px;
+  border: none;
   height: 50px;
   cursor: pointer;
   margin: 30px 0 0;

@@ -36,6 +36,8 @@ export const Home = () => {
 
     return (
         <SearchPageBlock>
+            <FilterByCategory valueSearch={valueSearch} handleSubmitValue={handleSubmit}/>
+
             <SearchWrapper>
             {cardsArray.cards.length ?
 
@@ -52,7 +54,6 @@ export const Home = () => {
                 </HomeWrap> : <Loader/>}
                 </SearchWrapper>
 
-            <FilterByCategory valueSearch={valueSearch} handleSubmitValue={handleSubmit}/>
         </SearchPageBlock>
     )
 }

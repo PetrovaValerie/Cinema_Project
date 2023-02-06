@@ -4,11 +4,10 @@ import {COLORS} from "../../styles";
 export const HomeWrap = styled.section`
   width: 100%;
   margin: 0 auto;
-  //display: flex;
 `
 
 export const HomeContainer = styled.div`
-  width: 75%;
+  width: 100%;
   min-height: 840px;
   padding: 150px 0px 50px;
   margin: 0 auto 50px;
