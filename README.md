@@ -1,7 +1,9 @@
 <!-- LOGO -->
 ![Logo][logo]
 <div align="center">
+<a href="#title">
 <h1>PIXEMA</h1>
+</a>
 Movie APP based on Kinopoisk API
 <hr/>
 <img src="https://shields.io/badge/react-black?logo=react&style=for-the-badge%22" alt="React badge">
@@ -63,7 +65,7 @@ The user can also create an account (sign up / sign in / log out) by clicking on
 ![Registration-form][register]
 
 
-[🔼 Back to top ](#description)
+[🔼 Back to the top ](#title)
 
 
 
