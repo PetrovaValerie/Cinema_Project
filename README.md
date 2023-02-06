@@ -65,7 +65,7 @@ The user can also create an account (sign up / sign in / log out) by clicking on
 ![Registration-form][register]
 
 
-[🔼 Back to the top ](#title)
+[🔼 Back to the Content ](#description)
 
 
 
